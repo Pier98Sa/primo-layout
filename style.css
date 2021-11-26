@@ -1,0 +1,41 @@
+.container-main{
+    width: 100%;
+}
+
+
+header{
+    height: 200px;
+    background-color:#00ff00;
+    width: 100%;
+}
+.sidebar{
+    background-color: blue;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.content{
+    background-color: red;
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+
+footer{
+    height: 300px;
+    width: 100%;
+    background-color: purple;
+}
+
+/* altro modo per applicare il clearfix
+.clearfix{
+    clear: both;
+}*/
+
+/*modo più pulito in cui usare il clearfix*/
+.container-main::after{
+    content: "";
+    display: table;
+    clear: both;
+}
